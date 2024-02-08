@@ -1,0 +1,118 @@
+<style>
+	.hero {
+		background-image: url("{{{variables.hero_bg}}}");
+	}
+
+	.cta {
+		background-image: url("{{{variables.cta_bg}}}");
+	}
+</style>
+
+<section class="hero">
+	<!-- 	<video autoplay muted loop class="hero__bgvideo">
+		<source src="{{{variables.hero_bg}}}" type="video/mp4" />
+	</video> -->
+
+	<div class="hero__container">
+		<div class="hero__main">
+			<h1 class="hero__title">{{{variables.hero_title}}}</h1>
+
+			<p class="hero__text">{{{variables.hero_text}}}</p>
+
+			<!-- 		<a href="#products" class="hero__link">
+				{{{variables.hero_link_text}}}
+			</a> -->
+		</div>
+	</div>
+</section>
+
+{% if products.length %}
+<section class="products" id="products">
+	<div class="products__container">
+		<div class="land-section land-section_white">
+			<span class="land-section__line_top reveal reveal__left"></span>
+			<span class="land-section__line_bottom reveal reveal__right"></span>
+			<div class="land-section__slider land-section-slider swiper">
+				<div class="products-slider__wrapper swiper-wrapper">
+					{% for product in products %}
+					<div class="land-section-slider__slide land-section-slide swiper-slide">
+						<a href="/product/{{{product.id}}}">
+							<img src="{{{product.thumb}}}" alt="{{{product.name}}}" />
+							<span class="land-section-slide__subtitle">
+								{{{product.name}}}
+							</span>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="land-section__main">
+				{% if variables.products_title %}
+				<h2 class="land-section__title title">
+					{{{variables.products_title}}}
+				</h2>
+				{% endif %} {% if variables.products_text %}
+				<p class="land-section__text">{{{variables.products_text}}}</p>
+				{% endif %}
+				{% if variables.products_button_text %}
+				<a href="/products" class="land-section__link">{{{variables.products_button_text}}}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+
+{% if articles.length %}
+<section class="articles">
+	<div class="articles__container">
+		{% if variables.articles_title %}
+		<h2 class="articles__title title">{{{variables.articles_title}}}</h2>
+		{% endif %} {% if variables.articles_subtitle %}
+		<h3 class="articles__subtitle">{{{variables.articles_subtitle}}}</h3>
+		{% endif %}
+
+		<div class="articles__slider swiper">
+			<div class="articles__wrapper articles-wrapper swiper-wrapper">
+				{% for article in articles %}
+				<div class="articles-wrapper__item articles-item swiper-slide">
+					<div class="articles-item__img">
+						<img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+					</div>
+
+					<div class="articles-item__text">
+						<span class="articles-item__title">{{{article.name}}}</span>
+
+						<p class="articles-item__desc">{{{article.short}}}</p>
+						<a href="/article/{{{article.id}}}" class="articles-item__link">{{{translate("Artemvelihin.Read more")}}}</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+
+
+		{% if variables.articles_button_text %}
+		<a href="/articles" class="articles__link">
+			{{{variables.articles_button_text}}}
+		</a>
+		{% endif %}
+	</div>
+</section>
+{% endif %}
+
+<section class="cta">
+	<div class="cta__container">
+		{% if variables.cta_title %}
+		<h2 class="cta__title">{{{variables.cta_title}}}</h2>
+		{% endif %} {% if variables.cta_text %}
+		<p class="cta__text">{{{variables.cta_text}}}</p>
+		{% endif %} {% if variables.cta_button_text %}
+		<!-- 		<a href="/manage/profile" class="cta__link">
+			{{{variables.cta_button_text}}}
+		</a> -->
+		{% endif %}
+	</div>
+</section>

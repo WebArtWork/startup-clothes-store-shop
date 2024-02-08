@@ -1,0 +1,392 @@
+/* ---------------------------------- Hero ---------------------------------- */
+
+.hero {
+	position: relative;
+
+	color: #fff;
+
+	background: url("/artemvelihin/img/hero-bg.jpg") center center/cover
+		no-repeat;
+
+	background-attachment: fixed;
+
+	overflow: visible;
+
+	min-height: 100vh;
+	width: 100%;
+
+	padding-top: clamp(10.625rem, 9.034rem + 7.95vw, 15rem);
+	padding-bottom: clamp(2.5rem, -1.136rem + 18.18vw, 12.5rem);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and (max-device-width: 1366px) {
+		background-attachment: scroll;
+	}
+
+	&::before {
+		content: "";
+		background: linear-gradient(
+			90deg,
+			#000 55%,
+			rgba(255, 0, 0, 0) 100%
+		);
+		opacity: 0.5;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+
+		height: 100%;
+		width: 100%;
+
+		@media (max-width: 767px) {
+			background: linear-gradient(
+				90deg,
+				#000 100%,
+				rgba(255, 0, 0, 0) 100%
+			);
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 20px;
+
+		position: relative;
+		z-index: 1;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			position: static;
+		}
+	}
+
+	&__main {
+		max-width: 50%;
+
+		@media (max-width: 767px) {
+			max-width: 100%;
+		 }
+	}
+
+	&__title {
+		width: 100%;
+		font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
+		line-height: 1.1;
+		font-weight: 700;
+	}
+
+	&__text {
+		font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+		font-weight: 400;
+		line-height: 1.4;
+
+		color: var(--primary-color);
+
+		max-width: 500px;
+
+		margin: 20px 0 0 0;
+	}
+
+	&__img {
+		width: 45%;
+		min-height: 100%;
+
+		border-radius: 20px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+		}
+	}
+
+	&__link {
+		@include button-black;
+
+		background-color: var(--tertiary-color);
+
+		transition: filter 0.5s;
+		color: var(--primary-color);
+
+		@media (any-hover: hover) {
+			&:hover {
+				filter: saturate(0);
+			}
+		}
+
+		margin: 40px 0 0 0;
+
+		padding: 21px 24px;
+
+		min-width: 180px;
+		min-height: 60px;
+	}
+}
+
+/* ---------------------------------- /Hero --------------------------------- */
+
+/* -------------------------------- Products ------------------------------- */
+
+.products {
+	padding: clamp(6.25rem, 5.114rem + 5.68vw, 9.375rem) 0;
+
+	background: #efefef;
+
+	color: var(--secondary-color);
+}
+
+/* -------------------------------- Articles -------------------------------- */
+
+.articles {
+	padding: clamp(6.25rem, 5.114rem + 5.68vw, 9.375rem) 0;
+
+	background: #323232;
+
+	color: var(--primary-color);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		max-width: 1200px;
+	}
+
+	&__subtitle {
+		margin-top: 20px;
+		font-weight: 400;
+		font-size: 25px;
+		text-align: center;
+	}
+
+	a.articles__link {
+		@include button-black;
+
+		margin: 50px auto 0 auto;
+
+		min-width: 200px;
+		min-height: 50px;
+
+		padding: 10px 20px;
+	}
+
+	&__slider {
+		min-height: 100px;
+		width: 100%;
+
+		margin-top: 60px;
+	}
+}
+
+.articles-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+
+	background-color: #212121;
+
+	border-radius: 10px;
+
+	&__img {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		max-height: 250px;
+
+		img {
+			width: 100%;
+			height: 100%;
+
+			border-radius: 10px 10px 0 0;
+
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+		padding: 30px 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: start;
+	}
+
+	&__title {
+		color: var(--primary-color);
+		text-align: left;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.1;
+
+		line-height: 1.5rem;
+		max-height: 2rem;
+		-webkit-box-orient: vertical;
+		display: block;
+		display: -webkit-box;
+		overflow: hidden !important;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 1;
+	}
+
+	&__desc {
+		color: inherit;
+
+		margin-top: 15px;
+
+		line-height: 1.5rem;
+		max-height: 4rem;
+		-webkit-box-orient: vertical;
+		display: block;
+		display: -webkit-box;
+		overflow: hidden !important;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 2;
+		font-size: 16px;
+	}
+
+	&__link {
+		margin-top: 30px;
+
+		color: var(--tertiary-color);
+		font-size: 20px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+
+			width: 100%;
+			height: 2px;
+
+			border-radius: 3px;
+
+			background-color: var(--tertiary-color);
+
+			transform: scaleX(0);
+			transform-origin: bottom right;
+			transition: transform 0.25s ease-out;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					transform: scaleX(1);
+					transform-origin: bottom left;
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------- /Articles ------------------------------- */
+
+/* ---------------------------------- Cta --------------------------------- */
+
+.cta {
+	padding: clamp(5rem, 4.545rem + 2.27vw, 6.25rem) 0;
+
+	background: url("/artemvelihin/img/cta-bg.jpg") center center/cover
+		no-repeat;
+
+	background-attachment: fixed;
+
+	position: relative;
+
+	&::before {
+		content: "";
+		background: linear-gradient(
+			90deg,
+			#000 100%,
+			rgba(255, 0, 0, 0) 100%
+		);
+		opacity: 0.5;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+
+		height: 100%;
+		width: 100%;
+	}
+
+	@media only screen and (max-device-width: 1366px) {
+		background-attachment: scroll;
+	}
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__container {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		width: 100%;
+		font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
+		line-height: 1.2;
+		font-weight: 700;
+		text-align: center;
+
+		max-width: 1000px;
+		color: var(--primary-color);
+	}
+
+	&__text {
+		font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+		font-weight: 400;
+		line-height: 1.4;
+		text-align: center;
+		color: var(--primary-color);
+	}
+
+	&__link {
+		width: 200px;
+		height: 50px;
+		border-radius: 25px;
+
+		background-color: var(--tertiary-color);
+		color: var(--primary-color);
+
+		border: 3px solid var(--tertiary-color);
+
+		transition: all 0.5s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				filter: saturate(0);
+			}
+		}
+
+		font-weight: 600;
+		font-size: 22px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+/* --------------------------------- /Cta --------------------------------- */

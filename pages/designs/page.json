@@ -1,0 +1,26 @@
+{
+	"name": "Designs",
+	"designs": [
+		{
+			"id": "123",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "Design Name"
+		},
+		{
+			"id": "123",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "Design Name"
+		},
+		{
+			"id": "123",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "Design Name"
+		}
+	]
+}

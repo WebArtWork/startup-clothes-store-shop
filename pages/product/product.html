@@ -1,0 +1,66 @@
+<section class="product">
+	<div class="product__container">
+		<div class="product__main">
+			<span class="land-section__line_top"></span>
+			<span class="land-section__line_bottom"></span>
+			<div class="product__slider product-slider main-slider swiper">
+				<div class="product-slider__wrapper swiper-wrapper">
+					<div
+						class="product-slider__slide product-slide swiper-slide"
+					>
+						<a
+							data-fancybox="gallery"
+							data-src="{{{product.thumb}}}"
+						>
+							<img
+								src="{{{product.thumb}}}"
+								alt="{{{product.name}}}"
+								class="product-slide__img"
+							/>
+						</a>
+					</div>
+					{% if product.thumbs.length %} {% for thumb in
+					product.thumbs %}
+					<div
+						class="product-slider__slide product-slide swiper-slide"
+					>
+						<a data-fancybox="gallery" data-src="{{{thumb}}}">
+							<img
+								src="{{{thumb}}}"
+								alt="{{{product.name}}}"
+								class="product-slide__img"
+							/>
+						</a>
+					</div>
+					{% endfor %} {% endif %}
+				</div>
+				<div class="product-slider__pagination swiper-pagination"></div>
+			</div>
+			<div class="product__info product-info">
+				<div class="product-info__row">
+					<h2 class="product-info__name">{{{product.name}}}</h2>
+					<span class="product-info__price">{{{product.price}}}</span>
+				</div>
+				<div class="product-info__row product-info__buttons">
+					<button
+						product_price="{{{product.price}}}"
+						class="product-info__add-to-cart"
+						product_id="{{{product.id}}}"
+						id="addToCart"
+					>
+					{{{translate("Artemvelihin.ADD TO CART")}}}
+					</button>
+					<button
+						product_price="{{{product.price}}}"
+						product_id="{{{product.id}}}"
+						class="product-info__buy-now"
+						id="addToCartAndPay"
+					>
+					{{{translate("Artemvelihin.BUY NOW")}}}
+					</button>
+				</div>
+				<p class="product-info__desc">{{{product.description}}}</p>
+			</div>
+		</div>
+	</div>
+</section>

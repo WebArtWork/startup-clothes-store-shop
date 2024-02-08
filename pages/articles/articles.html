@@ -1,0 +1,90 @@
+<script type="module">
+	import Article from "/api/wjst/article";
+	import Dom from "/api/wjst/dom";
+	let page = 1;
+
+	if ((await Article.page(1)).length < Article.perPage) {
+		Dom.remove("loadArticles");
+	}
+
+	Dom.click("loadArticles", async () => {
+		page++;
+		const articles = await Article.page(page);
+
+		if (articles.length < Article.perPage) {
+			Dom.remove("loadArticles");
+		}
+		for (const article of articles) {
+			if (!article.thumbs) {
+				article.thumbs = [];
+			}
+			Dom.add(
+				"articles",
+				Dom.template("article", {
+					thumb: article.thumb,
+					thumbs: article.thumbs.map((thumb) => {
+						return Dom.template("article_thumb", {
+							name: article.name,
+							thumb,
+						});
+					}),
+					name: article.name,
+					_id: article._id,
+				})
+			);
+		}
+	});
+</script>
+
+<section class="articles-page">
+	<div class="articles-page__container">
+		<div class="articles-page__content">
+			<div class="articles-page__wrapper" id="articles">
+				{% for article in articles %}
+				<div class="articles-page__card articles-page-card">
+					<a href="/article/{{{article.id}}}">
+						<div class="articles-page-card__img">
+							<img
+								src="{{{article.thumb}}}"
+								alt="{{{article.name}}}"
+							/>
+						</div>
+					</a>
+					<div class="articles-page-card__text">
+						<span class="articles-page-card__title">
+							<a href="/article/{{{article.id}}}"
+								>{{{article.name}}}</a
+							></span>
+							<div>{{{article._id|mongodate|date('Y-m-d')}}}</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			{% if articles.length === 20 %}
+			<button class="load-more" id="loadArticles">Load more</button>
+			{% endif %}
+		</div>
+		<div class="articles-page__header">
+			<h1 class="articles-page__title title">Articles</h1>
+		</div>
+	</div>
+</section>
+
+<div style="display: none" id="template-article">
+	<div class="articles-page__card articles-page-card">
+		<a href="/article/{_id}">
+			<div class="articles-page-card__img">
+				<img src="{thumb}" alt="{thumb}" />
+			</div>
+		</a>
+		<div class="articles-page-card__text">
+			<span class="articles-page-card__title">
+				<a href="/article/{_id}">{name}</a></span
+			>
+		</div>
+	</div>
+</div>
+
+<div style="display: none" id="template-article_thumb">
+	<img src="{thumb}" alt="{name}" />
+</div>

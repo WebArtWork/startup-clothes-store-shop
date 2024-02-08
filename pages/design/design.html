@@ -1,0 +1,37 @@
+<section class="design">
+	<div class="design__container">
+		<div class="design__main">
+			<div class="design__text">
+				<h1 class="design__title">{{{design.name}}}</h1>
+
+				<p class="design__desc">
+					{{{design.description}}}
+				</p>
+			</div>
+
+			<div class="design__slider design-slider main-slider swiper">
+				<div class="design-slider__wrapper swiper-wrapper">
+					<div class="design-slider__slide design-slide swiper-slide">
+						<a data-fancybox="gallery" data-src="{{{design.thumb}}}">
+							<img src="{{{design.thumb}}}" alt="{{{design.name}}}" class="design-slide__img" />
+						</a>
+					</div>
+					{% if design.thumbs.length %}
+					{% for thumb in design.thumbs %}
+					<div class="design-slider__slide design-slide swiper-slide">
+						<a data-fancybox="gallery" data-src="{{{thumb}}}">
+							<img src="{{{thumb}}}" alt="{{{design.name}}}" class="design-slide__img" />
+						</a>
+					</div>
+					{% endfor %}
+				{% endif %}
+
+				</div>
+
+				<div class="design-slider__pagination swiper-pagination"></div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+</section>

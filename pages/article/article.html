@@ -1,0 +1,22 @@
+
+<!-- {% if article.reference %}
+<a href="{{{article.reference}}}">{{{article.reference}}}</a>
+{% endif %} -->
+
+<section class="article-img">
+    <a a data-fancybox data-src="{{{article.thumb}}}">
+        <img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+    </a>
+</section>
+
+<section class="article">
+    <div class="article__container">
+        <h1 class="article__title title">{{{article.name}}}</h1>
+
+       
+
+        <p class="article__text">{{{article.short}}}</p>
+
+        <p class="article__text">{{{article.description}}}</p>
+    </div>
+</section>

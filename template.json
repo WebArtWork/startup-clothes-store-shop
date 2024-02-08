@@ -1,0 +1,174 @@
+{
+	"title": "Welcome to waw Template",
+	"description": "description",
+	"keywords": "keywords",
+	"prefix": "/artemvelihin",
+	"picture": "picture",
+	"author": "author",
+	"moderators": [],
+	"scss": "scss/index.scss",
+
+	"variables": {
+		"accent_color": "#00adb5",
+
+		"topbar_logo": "/artemvelihin/img/logo.svg",
+		"footer_logo": "/artemvelihin/img/logo.svg",
+
+		"hero_title": "The perfect online store for your business is already prepared",
+		"hero_text": "Ready-made website themes that will turn into your store in a few steps. Upgrade your business with Wawify.",
+		"hero_link_text": "Learn more",
+		"hero_bg": "/artemvelihin/img/hero.jpg",
+
+		"products_title": "Products",
+		"products_button_text": "View all",
+		"products_text": "Choose a template that will give your store a clean and modern look, allowing your products to appear more appealing and capture customers attention.",
+
+		"articles_title": "News from Wawify",
+		"articles_subtitle": "What's new at Wawify",
+		"articles_button_text": "View all posts",
+
+		"cta_title": "Upgrade your business with Wawify",
+		"cta_text": "Try on a website template that you like for your store",
+		"cta_button_text": "Try on",
+		"cta_bg": "/artemvelihin/img/hero.jpg",
+
+		"instagram": "https://instagram.com/wawify",
+		"facebook": "https://www.facebook.com/profile.php",
+		"twitter": "https://twitter.com/wawify_com",
+		"telegram": "https://t.me/wawify_news",
+
+		"footer_rights": "All rights Reserved © Wawify, 2023"
+	},
+
+	"footer": {
+		"products": [
+			{
+				"id": "/product",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "",
+				"name": "product"
+			},
+			{
+				"id": "/product",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "",
+				"name": "product"
+			},
+			{
+				"id": "/product",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "",
+				"name": "product"
+			}
+		],
+		"designs": [
+			{
+				"id": "/design",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "design"
+			},
+			{
+				"id": "/design",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "design"
+			},
+			{
+				"id": "/design",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "design"
+			}
+		],
+		"articles": [
+			{
+				"id": "/article",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "article"
+			},
+			{
+				"id": "/article",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "article"
+			},
+			{
+				"id": "/article",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "article"
+			}
+		],
+		"contents": [
+			{
+				"name": "NameTitle",
+				"thumb": "/angelina_nianchyr/img/4.webp",
+				"url": "Lorem ipsum ?"
+			},
+			{
+				"name": "NameTitle",
+				"thumb": "/angelina_nianchyr/img/8.webp",
+				"url": "Lorem ipsum ?"
+			},
+			{
+				"name": "NameTitle",
+				"thumb": "/angelina_nianchyr/img/7.webp",
+				"url": "Lorem ipsum ?"
+			},
+			{
+				"name": "NameTitle",
+				"thumb": "/angelina_nianchyr/img/5.webp",
+				"url": "Lorem ipsum ?"
+			}
+		]
+	},
+	"tags": [
+		{
+			"category": {
+				"group": "article"
+			},
+			"name": "Tag one"
+		},
+		{
+			"category": {
+				"group": "product"
+			},
+			"name": "Tag one"
+		},
+		{
+			"category": {
+				"group": "design"
+			},
+			"name": "Tag one"
+		}
+	],
+
+	"groups": [
+		{
+			"categories": [
+				{
+					"name": "Category Name",
+					"tags": [
+						{
+							"name": "Tag Name"
+						},
+						{
+							"name": "Tag Name"
+						},
+						{
+							"name": "Tag Name"
+						}
+					]
+				}
+			]
+		}
+	]
+}

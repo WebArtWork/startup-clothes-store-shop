@@ -1,0 +1,51 @@
+{
+	"title": "Cool Title",
+	"store": {
+		"telegram": "https://t.me/wawceo"
+	},
+	
+	"products": [
+		{
+			"id": "",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "product1"
+		},
+		{
+			"id": "",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "product2"
+		},
+		{
+			"id": "",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "product3"
+		}
+	],
+
+	"articles": [
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "article"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "article"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "article"
+		}
+	]
+}

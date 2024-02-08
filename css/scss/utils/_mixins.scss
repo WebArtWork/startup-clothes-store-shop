@@ -1,0 +1,122 @@
+@mixin button-black {
+	text-align: center;
+	font-weight: 600;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 20px;
+
+	cursor: pointer;
+
+	/* 
+
+	background: linear-gradient(45deg, var(--tertiary-color), transparent)
+			no-repeat top left -600px / 100% 100%,
+		linear-gradient(281deg, var(--tertiary-color), transparent) no-repeat
+			top right -600px/ 100% 100%; 
+			
+	*/
+
+	color: var(--primary-color);
+
+	box-shadow: inset -400px 0 0 0 var(--tertiary-color),
+		inset 400px 0 0 0 var(--tertiary-color);
+
+	// background-color: var(--tertiary-color);
+
+	border-radius: 999em;
+
+	transition: all 0.7s ease-in-out;
+
+	overflow: hidden;
+
+	position: relative;
+
+	&:active {
+		opacity: 0.7;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			/*
+			
+			background-position: top left 0, top right 0;
+			color: var(--secondary-color); 
+			
+			*/
+
+			box-shadow: inset 0px 0 0 0 var(--tertiary-color),
+				inset 0px 0 0 0 var(--tertiary-color),
+				var(--tertiary-color) inset 0px 0px 0px,
+				inset var(--tertiary-color) 0px 0px 0px 3px;
+			background-color: transparent;
+			color: var(--tertiary-color);
+		}
+	}
+}
+
+@mixin button-white {
+	text-align: center;
+	font-weight: 600;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 20px;
+
+	border-radius: 999em;
+
+	cursor: pointer;
+
+	box-shadow: inset 0px 0 0 0 var(--tertiary-color),
+		inset 0px 0 0 0 var(--tertiary-color),
+		var(--tertiary-color) inset 0px 1px 4px,
+		inset var(--tertiary-color) 0px 0px 0px 3px;
+	background-color: transparent;
+	color: var(--tertiary-color);
+
+	/* 
+
+	background: linear-gradient(45deg, var(--tertiary-color), transparent)
+			no-repeat top left -600px / 100% 100%,
+	linear-gradient(281deg, var(--tertiary-color), transparent) no-repeat
+			top right -600px/ 100% 100%; 
+			
+	*/
+
+	color: var(--tertiary-color);
+
+	transition: all 0.7s ease-in-out;
+
+	&:active {
+		opacity: 0.7;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			/* 	
+	
+	background-position: top left 0, top right 0;
+	color: var(--primary-color);  
+	
+	*/
+
+			box-shadow: inset -400px 0 0 0 var(--tertiary-color),
+				inset 400px 0 0 0 var(--tertiary-color);
+			background-color: var(--tertiary-color);
+			color: var(--primary-color);
+		}
+	}
+}
+
+@mixin page-padding {
+	padding: clamp(10.938rem, 9.915rem + 5.11vw, 13.75rem) 0
+		clamp(6.25rem, 5.114rem + 5.68vw, 9.375rem) 0;
+}

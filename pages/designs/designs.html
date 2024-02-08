@@ -1,0 +1,73 @@
+<script type="module">
+    import Design from '/api/wjst/design';
+    import Dom from '/api/wjst/dom';
+    let page = 1;
+
+    if ((await Design.page(1)).length < Design.perPage) {
+		Dom.remove('loadDesigns');
+	}
+
+    document.getElementById('loadDesigns').addEventListener('click', async () => {
+        page++;
+        const designs = await Design.page(page);
+
+        if (designs.length < Design.perPage) {
+		Dom.remove('loadDesigns');
+	}
+
+        for (const design of designs) {
+            if (!design.thumbs) {
+                design.thumbs = [];
+            }
+            Dom.add('designs', Dom.template('design', {
+                price: design.price,
+                thumb: design.thumb,
+                thumbs: design.thumbs.map(thumb => {
+                    return Dom.template('design_thumb', {
+                        name: design.name,
+                        thumb
+                    })
+                }),
+                name: design.name,
+                _id: design._id
+            }));
+        }
+    });
+</script>
+
+<section class="designs-page">
+    <div class="designs-page__container">
+        <h2 class="designs-page__title title">{{{translate("Artemvelihin.Designs")}}}</h2>
+        <div class="designs-page__wrapper" id="designs">
+            {% for design in designs %}
+            <a href="/design/{{{design.id}}}" class="designs-page__card designs-page-card">
+                <div class="designs-page-card__img">
+                    <img src="{{{design.thumb}}}" alt="{{{design.name}}}" />
+                </div>
+                <span class="designs-page-card__title">{{{design.name}}}</span>
+            </a>
+            {% endfor %}
+        </div>
+		{% if designs.length === 20 %}
+        <button class="load-more" id="loadDesigns">{{{translate("Artemvelihin.Load more")}}}</button>
+		{% endif %}
+    </div>
+</section>
+
+<div style="display: none;" id="template-design">
+	<div class="designs-page__card designs-page-card">
+		<a href="/design/{_id}" class="designs-page-card__img">
+			<img src="{thumb}" alt="{name}" />
+			{thumbs}
+		</a>
+
+		<div class="designs-page-card__text">
+			<a href="/design/{_id}" class="designs-page-card__name">{name}</a>
+			<span class="designs-page-card__price">{price}</span>
+		</div>
+	</div>
+</div>
+
+<div style="display: none;" id="template-design_thumb">
+	<img src="{thumb}" alt="{name}" />
+</div>

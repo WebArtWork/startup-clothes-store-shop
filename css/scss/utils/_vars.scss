@@ -1,0 +1,29 @@
+/* font family */
+$ff-base: "Roboto", sans-serif;
+$ff-title: "Lato", sans-serif;
+$ff-second: "Roboto", sans-serif;
+
+/* font-size */
+$fs: 16px;
+
+:root {
+	--container-width: 1480px;
+	--primary-color: #fff;
+	--secondary-color: #212121;
+	/*--tertiary-color: #ff852b; */
+	--font-family: "Montserrat";
+}
+
+// ===== COLORS =====
+
+$blue: #334d6e;
+$sky: #3498db;
+$skyL: #58acf5;
+$grey: #bdbdbd;
+$greyL: #f2f2f2;
+$red: #a31010;
+$redD: #8c1b0f;
+$green: #089227;
+$white: #fff;
+$black: #000;
+$dark: #000;

@@ -1,0 +1,68 @@
+{
+	"name": "articles",
+	"articles": [
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		},
+		{
+			"id": "",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://agro.webart.work/template/img/welcome.png",
+			"name": "Article Name"
+		}
+	]
+}
