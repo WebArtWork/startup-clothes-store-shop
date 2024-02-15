@@ -1,69 +1,41 @@
 {
 	"name": "products",
-	"products": [
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"thumbs": ["https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"], 
-			"name": "lorem ipsum"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		},
-		{
-			"id": "",
-			"price": 1200,
-			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        	"thumb": "https://agro.webart.work/template/img/welcome.png",
-			"name": "product"
-		}
+	"tags": [
+	  {
+		"name": "Clothes",
+		"products": [
+		  {
+			"thumb": "/artemvelihin/img/1.jpg",
+			"price": "3200$",
+			"name": "Clothes"
+		  },
+		  {
+			"thumb": "/artemvelihin/img/2.jpg",
+			"price": "3200$",
+			"name": "Clothes"
+		  },
+		  {
+			"thumb": "/artemvelihin/img/3.jpg",
+			"price": "3200$",
+			"name": "Clothes"
+		  },
+		  {
+			"thumb": "/artemvelihin/img/1.jpg",
+			"price": "3200$",
+			"name": "Clothes"
+		  },
+		  {
+			"thumb": "/artemvelihin/img/2.jpg",
+			"price": "3200$",
+			"name": "Clothes"
+		  },
+		  {
+			"thumb": "/artemvelihin/img/3.jpg",
+			"price": "3200$",
+			"name": "Clothes"
+		  }
+		]
+	  }
 	]
-}
+  }
+  

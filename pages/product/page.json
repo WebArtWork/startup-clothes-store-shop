@@ -3,10 +3,10 @@
 	"product": {
 		"id": "/product",
 		"price": 1200,
-		"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-        "thumb": "https://agro.webart.work/template/img/welcome.png",
-        "thumbs": ["https://plus.unsplash.com/premium_photo-1683141052679-942eb9e77760?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"], 
-		"name": "product"
+		"short": "Versatile Wardrobe Essentials:",
+		"description": "Discover a carefully curated selection of wardrobe essentials that seamlessly transition from day to night, casual to formal. Our collection features a diverse range of clothing, from classic pieces that stand the test of time to the latest fashion-forward trends that keep you on the cutting edge of style.",
+        "thumb": "/artemvelihin/img/1.jpg",
+        "thumbs": ["/artemvelihin/img/2.jpg", "/artemvelihin/img/3.jpg"], 
+		"name": "Clothes"
 	}
 }

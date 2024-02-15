@@ -1,4 +1,4 @@
-<script type="module">
+<!-- <script type="module">
 	import Product from "/api/wjst/product";
 	import Dom from "/api/wjst/dom";
 	Product.perPage = 1;
@@ -39,67 +39,51 @@
 				);
 			}
 		});
-</script>
+</script> -->
 
-<section class="products-page">
-	<div class="products-page__container">
-		<h1 class="products-page__title title">{{{translate("Artemvelihin.Products")}}}</h1>
-
-		<!--
-		<div class="sidebar">
-			<span class="sidebar__title">Filters:</span>
-			<div class="sidebar__content">
-				{% for group in groups %} {% for category in group.categories %}
-				<div class="sidebar__item sidebar-item">
-					<div class="sidebar-item__title">{{{category.name}}}</div>
-
-					<div class="sidebar-item__links">
-						{% for tag in category.tags %}
-						<a
-							href="/products/{{{tag.id}}}"
-							class="sidebar-item__link"
-							>— {{{tag.name}}}
-						</a>
-						{% endfor %}
-					</div>
-				</div>
-				{% endfor %} {% endfor %}
-			</div>
-		</div>
- 		-->
-
-		<div class="products-page__wrapper" id="products">
-			{% for product in products %}
-			<div class="products-page__card products-page-card">
-				<a
-					href="/product/{{{product.id}}}"
-					class="products-page-card__img"
-				>
-					<img src="{{{product.thumb}}}" alt="{{{product.name}}}" />
-					{% if product.thumbs.length %} {% for thumb in
-					product.thumbs %}
-					<img src="{{{thumb}}}" alt="{{{product.name}}}" />
-					{% endfor %} {% endif %}
-				</a>
-				<div class="products-page-card__text">
-					<a
-						href="/product/{{{product.id}}}"
-						class="products-page-card__name"
-						>{{{product.name}}}</a
-					>
-					<span class="products-page-card__price">
-						{{{product.price}}}
-					</span>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-		{% if products.length === 20 %}
-		<button class="load-more" id="loadProducts">{{{translate("Artemvelihin.Load more")}}}</button>
-		{% endif %}
+<section class="cta">
+	<div class="cta__container">
+		{% if variables.cta_title %}
+		<h2 class="cta__title">{{{variables.cta_title}}}</h2>
+		{% endif %} {% if variables.cta_text %}
+		<p class="cta__text">{{{variables.cta_text}}}</p>
+		{% endif %} <!-- {% if variables.cta_button_text %}
+		<a href="/manage/profile" class="cta__link">
+			{{{variables.cta_button_text}}}
+		</a>
+		{% endif %} -->
 	</div>
 </section>
+  <div class="products-page__container">
+	{% for tag in tags %}
+    <h1 class="products-page__title title">
+		{{{tag.name}}}
+    </h1>
 
+    <div class="products-page__wrapper">
+		{% for product in tag.products %}
+      <div class="products-page__card products-page-card">
+        <a href="/product/{{{product.id}}}" class="products-page-card__img">
+          <img src="{{{product.thumb}}}" alt="{{{product.name}}}" />
+          {% if product.thumbs.length %} {% for thumb in product.thumbs %}
+          <img src="{{{thumb}}}" alt="{{{product.name}}}" />
+          {% endfor %} {% endif %}
+        </a>
+        <div class="products-page-card__text">
+			<a href="/product{{{product.url ? '/' + product.url : '' || product.id ? '/' + product.id : ''}}}" class="products-page-card__name"
+            >{{{product.name}}}</a
+          >
+          <span class="products-page-card__price"> {{{product.price}}} </span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- {% if products.length === 20 %}
+		<button class="load-more" id="loadProducts">{{{translate("Artemvelihin.Load more")}}}</button>
+		{% endif %} -->
+  </div>
+</section>
+<!-- 
 <div style="display: none" id="template-product">
 	<div class="products-page__card products-page-card">
 		<a href="/product/{_id}" class="products-page-card__img">
@@ -116,4 +100,4 @@
 
 <div style="display: none" id="template-product_thumb">
 	<img src="{thumb}" alt="{name}" />
-</div>
+</div> -->
