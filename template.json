@@ -130,26 +130,6 @@
 			}
 		]
 	},
-	"tags": [
-		{
-			"category": {
-				"group": "article"
-			},
-			"name": "Tag one"
-		},
-		{
-			"category": {
-				"group": "product"
-			},
-			"name": "Tag one"
-		},
-		{
-			"category": {
-				"group": "design"
-			},
-			"name": "Tag one"
-		}
-	],
 
 	"groups": [
 		{
